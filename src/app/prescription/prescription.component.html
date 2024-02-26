@@ -1,0 +1,21 @@
+<div>
+    <!-- <h2 class = "app-text">Appointment Report</h2> -->
+    <!-- <hr style="position: relative;left : 40px;width: 10p;"> -->
+    </div>
+    <!-- <div class="content"> -->
+        <h1 class = "pres-text">Prescription</h1>
+         
+          <div class="card-symptoms" *ngFor="let prescription of prescriptions">
+            <h3>{{ prescription.title }}</h3>
+            <p *ngFor="let symptom of prescription.symptoms">{{ symptom }}</p>
+            <!-- <button *ngFor="let consumption of prescription.consumption ">{{ consumption }}</button> -->
+            <!-- <img class="image" *ngIf="prescription.img" [src]="prescription.img" alt=""> -->
+            <br>
+          </div>
+      <!-- </div> -->
+      <div class="container2">
+        <div class="card-location">
+          <h3>Recommonded Location</h3>
+          <span><img class="rotate" src="../../../assets/location.svg">St.John's Clinic</span>
+          </div>
+        </div>

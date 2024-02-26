@@ -1,0 +1,41 @@
+
+<div class="con">
+    <app-prescription></app-prescription>
+    <div class="all">
+      <div class="card">
+        <h3>Vitals</h3>
+        <div>
+          <div class="image">
+            <span> <img src="../../../assets/heart.svg"  ></span>
+            <span ><i class="heart-icon" ></i> {{ vitals.heartRate }} BPM</span>
+           </div>
+           <div class="image1">
+            <span><img class="rotate" src="../../../assets/thermometer-half.svg"></span>
+            <span><i class="temp-icon" ></i> {{ vitals.temperature }} °C</span>
+          </div>
+          <div class="image">
+            <span><img src="../../../assets/lungs.svg"></span>
+            <span><i class="respiratory-icon "></i> {{ vitals.respiratoryRate }} BPM</span>
+          </div>
+        </div>
+    </div>
+      <div class="card-symptoms">
+        <h3>Symptoms</h3>
+        <button *ngFor="let symptom of symptoms">{{ symptom }}</button>
+      </div>
+      
+      <div class="card-tests">
+        <h3>Tests</h3>
+        <button *ngFor="let test of tests">{{ test }}</button>
+      </div>
+      
+      <div class="card-doctors">
+        <h3>Recommended Doctors</h3>
+       <button *ngFor="let doctor of recommendedDoctors">{{ doctor.name }}</button>
+       </div>
+    </div>
+</div>
+    
+    <div class="card-comments">
+      <h3>Comments</h3>
+     </div>
